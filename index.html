@@ -6,6 +6,7 @@
   <title>FISPQ - Ficha de Informação de Segurança de Produtos Químicos</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Estilos existentes */
     body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
     header { background-color: #2c3e50; color: white; padding: 10px 20px; text-align: center; }
     footer { background-color: #2c3e50; color: white; text-align: center; padding: 10px 0; position: relative; bottom: 0; width: 100%; }
@@ -45,7 +46,7 @@
     }
 
     /* Estilos para linhas alternadas */
-    tr:nth-child(odd) { background-color: #f9f9f9; }
+    tr:nth-child(odd) { background-color: #dcdcdc; } /* Cinza mais escuro */
     tr:nth-child(even) { background-color: #ffffff; }
   </style>
 </head>
@@ -53,7 +54,8 @@
   <header>
     <h1>Ficha de Informação de Segurança de Produtos Químicos (FISPQ/FDS)</h1>
   </header>
-  <table>
+  <input type="text" id="searchInput" placeholder="Pesquisar código..." onkeyup="filterTable()" style="margin: 20px; padding: 10px; width: calc(100% - 40px);">
+  <table id="dataTable">
     <thead>
       <tr>
         <th scope="col">Código</th>
@@ -104,9 +106,20 @@
       <tr><td data-label="Código">MD-DVSOS-00052-00</td><td data-label="Descrição">VASELINA SOLIDA C/1KG</td><td data-label="Link"><a href="https://www.vonder.com.br/estatico/vonder/documentos/5160450000/FISPQ.pdf" target="_blank">Link</a></td></tr>
     </tbody>
   </table>
-  <footer>
-    <p>&copy; 2025 FISPQ/FDS. ALMOXARIFADO HUHTAMAKI</p>
-  </footer>
-
+  <script>
+    function filterTable() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById('dataTable');
+      const tr = table.getElementsByTagName('tr');
+      for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[0];
+        if (td) {
+          const txtValue = td.textContent || td.innerText;
+          tr[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+        }
+      }
+    }
+  </script>
 </body>
 </html>
