@@ -4,19 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FISPQ - Ficha de Informação de Segurança de Produtos Químicos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { color: #2c3e50; }
-    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header { background-color: #2c3e50; color: white; padding: 10px 20px; text-align: center; }
+    footer { background-color: #2c3e50; color: white; text-align: center; padding: 10px 0; position: relative; bottom: 0; width: 100%; }
+    h1 { color: #ecf0f1; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     th, td { border: 1px solid #bdc3c7; padding: 10px; text-align: left; }
     th { background-color: #ecf0f1; }
     tr:hover { background-color: #f1f1f1; }
     a { color: #2980b9; text-decoration: none; }
     a:hover { text-decoration: underline; }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        display: none;
+      }
+      tr {
+        margin-bottom: 15px;
+      }
+      td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+      }
+      td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: bold;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Ficha de Informação de Segurança de Produtos Químicos (FISPQ/FDS)</h1>
+  <header>
+    <h1>Ficha de Informação de Segurança de Produtos Químicos (FISPQ/FDS)</h1>
+  </header>
   <table>
     <thead>
       <tr>
@@ -26,52 +58,51 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>MD-LUBRI-00001-00</td><td>LUBRIFICANTE SEC MOLYKOTED321</td><td><a href="https://www.dupont.com/content/dam/dupont/amer/us/en/Molykote/public/sds/pt/molykote-d-321-r-anti-friction-coating-BR-SDS-000000839000.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00006-00</td><td>LUBRIFICANTE PRECISIONSILICON</td><td><a href="https://docs.rs-online.com/08f0/0900766b80d5e8c7.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00009-00</td><td>OLEO DESENGRIPANTE STARRET M1 MICRO OLEO 300ML</td><td><a href="https://fitmall.com.br/wp-content/uploads/2019/07/M1-starrett-FISPQ_M1_AEROSSOL_REV02_VS00_out_2018.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00011-00</td><td>OLEO HIDRAULICO 0,8780 GALAO 20L AW68 MOBIL</td><td><a href="https://www.mobilindustrial.com.br/media/2285/mobil-hidraulico-aw-68-hlp-msds_2018.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00012-00</td><td>OLEO HIDRAULICO 0,880 BALDE 20L 600XP320 MOBIL</td><td><a href="https://irp.cdn-website.com/41b6684f/files/uploaded/FISPQ_Mobilgear-600-xp-320-LUBCENTER_21-2179-8896.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00013-00</td><td>OLEO HIDRAULICO 0,881  DTE 26 MOBIL</td><td><a href="https://www.mobilindustrial.com.br/media/1219/mobil-dte-26-msds_2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00014-00</td><td>OLEO LUBR EXXONMOBIL/MOBILSHC 630</td><td><a href="https://www.mobilindustrial.com.br/media/1273/mobil-shc-630-msds_2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00015-00</td><td>OLEO LUBR MIN ADIT MOBILGEAR600XP150</td><td><a href="https://www.mobilindustrial.com.br/media/3368/mobilgear-600-xp-150-msds.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00016-00</td><td>OLEO LUBR MIN COSAN/MOBILGEAR  600 XP 680</td><td><a href="https://www.mobilindustrial.com.br/media/3372/mobilgear-600-xp-680-msds.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00017-00</td><td>OLEO LUBR MIN COSAN/MOBILGEAR600XP46020L</td><td><a href="https://www.mobilindustrial.com.br/media/3371/mobilgear-600-xp-460-msds.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00018-00</td><td>OLEO LUBR MIN COSAN/MOBILGEAR600XP6820L</td><td><a href="https://www.mobilindustrial.com.br/media/3367/mobilgear-600-xp-68-msds.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00019-00</td><td>OLEO LUBR MIN EXXONMOBIL/VELOCITE N6 20L</td><td><a href="https://www.mobilindustrial.com.br/media/1322/mobil-velocite-oil-no-6-msds_2018.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00022-00</td><td>OLEO LUBR P/CORR FOODLUBE CHAIN SPRAY FAB ROCOL</td><td><a href="https://docs.rs-online.com/e82f/0900766b81422c81.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00024-00</td><td>OLEO LUBR SINTET COSAN/MOBILSHC 634</td><td><a href="https://www.mobilindustrial.com.br/media/1275/mobil-shc-634-msds_2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00025-00</td><td>OLEO LUBR SINTET COSAN/MOBILSHC629</td><td><a href="https://www.mobilindustrial.com.br/media/1272/mobil-shc-629-msds-2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00027-00</td><td>OLEO LUBRIFICANTE MOBIL VACTRA N4</td><td><a href="https://www.mobilindustrial.com.br/media/1318/mobil-vactra-oil-no-4-msds_2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00028-00</td><td>OLEO 0,890 -24oC TAMBOR 20L 600XP220 MOBIL</td><td><a href="https://www.unilubrificantes.com.br/uploads/products-files/2022/03/unix-mancal-ficha-de-seguranca-1648748989.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00030-00</td><td>OLEO HIDRAULICO 0,871 BALDE 20L DTE 24 MOBIL</td><td><a href="https://www.mobilindustrial.com.br/media/3281/mobil-dte-24-ultra-msds-2019.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00031-00</td><td>OLEO LUBR COSAN/MOBILGLYCOYLE3020L</td><td><a href="https://www.mobilindustrial.com.br/media/1246/mobil-glygoyle-30-msds-2017.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00032-00</td><td>GRAXA OLEO MIN -40A150GRC SKF/LGHP2/18</td><td><a href="https://www.skf.com/mm/0901d196800c877c" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00038-00</td><td>DESENGRAXANTE LAVA PECAS 389015120 WURTH BB 20L</td><td><a href="https://pt.scribd.com/document/636747977/02-389015-DESENGRAXANTE-DIELETRICO" target="_blank">Link</a></td></tr>
-      <tr><td>MM-LUBRI-00039-00</td><td>DESENGRAXANTE EXPRESS POWER COD:0893650993 WURTH</td><td><a href="https://pt.scribd.com/document/794344201/0893650993-DESENGRAXANTE-EXPRESS-POWER-ONU1950-FISPQ" target="_blank">Link</a></td></tr>
-      <tr><td>UG-GASES-00001-00</td><td>GAS REFRIG R-22 EMB 13,6KG</td><td><a href="https://friogas.com.br/wp-content/uploads/2023/01/FISPQ-R22-REFRIGERANT.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>UG-GASES-00003-00</td><td>GAS REFRIGERANTE R-410A CILINDRO 11,34KG</td><td><a href="https://eos.com.br/suaempresa/wp-content/uploads/2015/09/FISPQ-R-410A.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>UG-GASES-00004-00</td><td>GAS REFRIGERANTE R-141B CILINDRO 13,6 KG</td><td><a href="https://blog.dufrio.com.br/wp-content/uploads/2016/10/fispq-gas-hcfc-141b.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>UG-GASES-00005-00</td><td>GAS REFRIGERANTE 134A CILINDRO 13,62KG</td><td><a href="https://friogas.com.br/wp-content/uploads/2023/01/FISPQ-R134a-REFRIGERANT.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>UC-ACETA-00001-00</td><td>ACETATO DE ETILA C/180 KG</td><td><a href="https://www.labsynth.com.br/fispq/FISPQ-%20Acetato%20de%20Etila.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00002-00</td><td>DUREPOX</td><td><a href="https://autofix.ind.br/fichas/FISPQ%20DUREPOXI%20100G%201830.500.000.PDF" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00014-00</td><td>ADESIVO PARA JUNTAS DE MOTORE</td><td><a href="https://autofix.ind.br/fichas/FISPQ-Adesivo-para-Junta-de-Motores.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00015-00</td><td>ADESIVO BICOMP EPOXI ARALDITE 10 MINUTOS</td><td><a href="https://dev-d9-tekbond-com-br.content.saint-gobain.io/sites/tekbond.com.br/files/2019-01/fispq_fispq_n.0118_araldite_profissional_rev_06_17.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00016-00</td><td>ADESIVO INST HENKEL/LOCTITESU</td><td><a href="https://cdn.leroymerlin.com.br/medias/document-89294002-fispq-cola-instantanea-loctite-60-sec--20g-henkel.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00017-00</td><td>ADESIVO PLASTI TUB PVC BISNA</td><td><a href="https://tigrecombr-prod.s3.amazonaws.com/default/files/produtos/ficha-de-seguranca/Adesivo%20PVC%20Incolor%20Tigre%20-%20V.5%20-%2004-09-2018_0.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00018-00</td><td>ADESIVO TRAV ROSC ALTRES WURT</td><td><a href="https://www.vonder.com.br/estatico/vonder/documentos/1644775050/FISPQ.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00019-00</td><td>ADESIVO TRAV ROSC MEDRES WURT</td><td><a href="https://pt.scribd.com/document/794344191/0893270-Trava-Roscas-Torque-Medio-W742-FISPQ" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00020-00</td><td>ADITIVO P/RAD EMB 1L RADIEX/R</td><td><a href="https://grupogelog.com.br/wp-content/uploads/2022/09/FISPQ-ADITIVO-RADIADOR-RADIEX_nao-classificado-4.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00021-00</td><td>AGUA DESTIL EMB 1L</td><td><a href="https://dinamicaquimica.com.br/freagentes/P.10.0039.009.00_AGUA_DESTILADA.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00039-00</td><td>LIMPAD CONEC CIRC 300ML 38956</td><td><a href="https://baston.com.br/wp-content/uploads/2023/10/FISPQ-Limpa-contato.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00040-00</td><td>MASSA POLIR SOL VD CROMO 1UN</td><td><a href="https://www.blascor.com/wp-content/uploads/2022/03/fispq-massa-de-polirdocx.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00046-00</td><td>PASTA LUBR MOLYKOTE/MOLYKOTEP</td><td><a href="https://www.dupont.com/content/dam/dupont/amer/us/en/Molykote/public/sds/pt/molykote-1000-paste-BR-SDS-000000853068.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00047-00</td><td>SILICONE NEUTRO GREY HT ALT TEMPERATURA 60G WURTH</td><td><a href="https://s3.sa-east-1.amazonaws.com/bd-sp.canaldapeca.com.br/Wurth/FISPQ/15-03-2023/0892_301_252.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00048-00</td><td>SILICONE LIQ GALAO 5L 0893221</td><td><a href="https://cdn.doocacommerce.com.br/allchem/product/attachments/fispq-silicone-liquido-1518617602334.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00049-00</td><td>SILICONE PAST BISNAGA 250G OR</td><td><a href="https://www.renylab.ind.br/wp-content/uploads/2018/08/FISPQ-Silicone.pdf" target="_blank">Link</a></td></tr>
-      <tr><td>MD-DVSOS-00052-00</td><td>VASELINA SOLIDA C/1KG</td><td><a href="https://www.vonder.com.br/estatico/vonder/documentos/5160450000/FISPQ.pdf" target="_blank">Link</a></td></tr>
-    </tbody>
+      <tr><td data-label="Código">MD-LUBRI-00001-00</td><td data-label="Descrição">LUBRIFICANTE SEC MOLYKOTED321</td><td data-label="Link"><a href="https://www.dupont.com/content/dam/dupont/amer/us/en/Molykote/public/sds/pt/molykote-d-321-r-anti-friction-coating-BR-SDS-000000839000.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00006-00</td><td data-label="Descrição">LUBRIFICANTE PRECISIONSILICON</td><td data-label="Link"><a href="https://docs.rs-online.com/08f0/0900766b80d5e8c7.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00009-00</td><td data-label="Descrição">OLEO DESENGRIPANTE STARRET M1 MICRO OLEO 300ML</td><td data-label="Link"><a href="https://fitmall.com.br/wp-content/uploads/2019/07/M1-starrett-FISPQ_M1_AEROSSOL_REV02_VS00_out_2018.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00011-00</td><td data-label="Descrição">OLEO HIDRAULICO 0,8780 GALAO 20L AW68 MOBIL</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/2285/mobil-hidraulico-aw-68-hlp-msds_2018.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00012-00</td><td data-label="Descrição">OLEO HIDRAULICO 0,880 BALDE 20L 600XP320 MOBIL</td><td data-label="Link"><a href="https://irp.cdn-website.com/41b6684f/files/uploaded/FISPQ_Mobilgear-600-xp-320-LUBCENTER_21-2179-8896.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00013-00</td><td data-label="Descrição">OLEO HIDRAULICO 0,881  DTE 26 MOBIL</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1219/mobil-dte-26-msds_2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00014-00</td><td data-label="Descrição">OLEO LUBR EXXONMOBIL/MOBILSHC 630</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1273/mobil-shc-630-msds_2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00015-00</td><td data-label="Descrição">OLEO LUBR MIN ADIT MOBILGEAR600XP150</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/3368/mobilgear-600-xp-150-msds.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00016-00</td><td data-label="Descrição">OLEO LUBR MIN COSAN/MOBILGEAR  600 XP 680</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/3372/mobilgear-600-xp-680-msds.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00017-00</td><td data-label="Descrição">OLEO LUBR MIN COSAN/MOBILGEAR600XP46020L</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/3371/mobilgear-600-xp-460-msds.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00018-00</td><td data-label="Descrição">OLEO LUBR MIN COSAN/MOBILGEAR600XP6820L</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/3367/mobilgear-600-xp-68-msds.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00019-00</td><td data-label="Descrição">OLEO LUBR MIN EXXONMOBIL/VELOCITE N6 20L</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1322/mobil-velocite-oil-no-6-msds_2018.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00022-00</td><td data-label="Descrição">OLEO LUBR P/CORR FOODLUBE CHAIN SPRAY FAB ROCOL</td><td data-label="Link"><a href="https://docs.rs-online.com/e82f/0900766b81422c81.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00024-00</td><td data-label="Descrição">OLEO LUBR SINTET COSAN/MOBILSHC 634</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1275/mobil-shc-634-msds_2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00025-00</td><td data-label="Descrição">OLEO LUBR SINTET COSAN/MOBILSHC629</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1272/mobil-shc-629-msds-2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00027-00</td><td data-label="Descrição">OLEO LUBRIFICANTE MOBIL VACTRA N4</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1318/mobil-vactra-oil-no-4-msds_2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00028-00</td><td data-label="Descrição">OLEO 0,890 -24oC TAMBOR 20L 600XP220 MOBIL</td><td data-label="Link"><a href="https://www.unilubrificantes.com.br/uploads/products-files/2022/03/unix-mancal-ficha-de-seguranca-1648748989.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00030-00</td><td data-label="Descrição">OLEO HIDRAULICO 0,871 BALDE 20L DTE 24 MOBIL</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/3281/mobil-dte-24-ultra-msds-2019.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-LUBRI-00031-00</td><td data-label="Descrição">OLEO LUBR COSAN/MOBILGLYCOYLE3020L</td><td data-label="Link"><a href="https://www.mobilindustrial.com.br/media/1246/mobil-glygoyle-30-msds-2017.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-GASES-00001-00</td><td data-label="Descrição">GAS REFRIG R-22 EMB 13,6KG</td><td data-label="Link"><a href="https://friogas.com.br/wp-content/uploads/2023/01/FISPQ-R22-REFRIGERANT.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-GASES-00003-00</td><td data-label="Descrição">GAS REFRIGERANTE R-410A CILINDRO 11,34KG</td><td data-label="Link"><a href="https://eos.com.br/suaempresa/wp-content/uploads/2015/09/FISPQ-R-410A.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-GASES-00004-00</td><td data-label="Descrição">GAS REFRIGERANTE R-141B CILINDRO 13,6 KG</td><td data-label="Link"><a href="https://blog.dufrio.com.br/wp-content/uploads/2016/10/fispq-gas-hcfc-141b.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MM-GASES-00005-00</td><td data-label="Descrição">GAS REFRIGERANTE 134A CILINDRO 13,62KG</td><td data-label="Link"><a href="https://friogas.com.br/wp-content/uploads/2023/01/FISPQ-R134a-REFRIGERANT.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">UC-ACETA-00001-00</td><td data-label="Descrição">ACETATO DE ETILA C/180 KG</td><td data-label="Link"><a href="https://www.labsynth.com.br/fispq/FISPQ-%20Acetato%20de%20Etila.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00002-00</td><td data-label="Descrição">DUREPOX</td><td data-label="Link"><a href="https://autofix.ind.br/fichas/FISPQ%20DUREPOXI%20100G%201830.500.000.PDF" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00014-00</td><td data-label="Descrição">ADESIVO PARA JUNTAS DE MOTORE</td><td data-label="Link"><a href="https://autofix.ind.br/fichas/FISPQ-Adesivo-para-Junta-de-Motores.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00015-00</td><td data-label="Descrição">ADESIVO BICOMP EPOXI ARALDITE 10 MINUTOS</td><td data-label="Link"><a href="https://dev-d9-tekbond-com-br.content.saint-gobain.io/sites/tekbond.com.br/files/2019-01/fispq_fispq_n.0118_araldite_profissional_rev_06_17.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00016-00</td><td data-label="Descrição">ADESIVO INST HENKEL/LOCTITESU</td><td data-label="Link"><a href="https://cdn.leroymerlin.com.br/medias/document-89294002-fispq-cola-instantanea-loctite-60-sec--20g-henkel.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00017-00</td><td data-label="Descrição">ADESIVO PLASTI TUB PVC BISNA</td><td data-label="Link"><a href="https://tigrecombr-prod.s3.amazonaws.com/default/files/produtos/ficha-de-seguranca/Adesivo%20PVC%20Incolor%20Tigre%20-%20V.5%20-%2004-09-2018_0.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00018-00</td><td data-label="Descrição">ADESIVO TRAV ROSC ALTRES WURT</td><td data-label="Link"><a href="https://www.vonder.com.br/estatico/vonder/documentos/1644775050/FISPQ.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00019-00</td><td data-label="Descrição">ADESIVO TRAV ROSC MEDRES WURT</td><td data-label="Link"><a href="https://pt.scribd.com/document/794344191/0893270-Trava-Roscas-Torque-Medio-W742-FISPQ" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00020-00</td><td data-label="Descrição">ADITIVO P/RAD EMB 1L RADIEX/R</td><td data-label="Link"><a href="https://grupogelog.com.br/wp-content/uploads/2022/09/FISPQ-ADITIVO-RADIADOR-RADIEX_nao-classificado-4.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00021-00</td><td data-label="Descrição">AGUA DESTIL EMB 1L</td><td data-label="Link"><a href="https://dinamicaquimica.com.br/freagentes/P.10.0039.009.00_AGUA_DESTILADA.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00039-00</td><td data-label="Descrição">LIMPAD CONEC CIRC 300ML 38956</td><td data-label="Link"><a href="https://baston.com.br/wp-content/uploads/2023/10/FISPQ-Limpa-contato.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00040-00</td><td data-label="Descrição">MASSA POLIR SOL VD CROMO 1UN</td><td data-label="Link"><a href="https://www.blascor.com/wp-content/uploads/2022/03/fispq-massa-de-polirdocx.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00046-00</td><td data-label="Descrição">PASTA LUBR MOLYKOTE/MOLYKOTEP</td><td data-label="Link"><a href="https://www.dupont.com/content/dam/dupont/amer/us/en/Molykote/public/sds/pt/molykote-1000-paste-BR-SDS-000000853068.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00047-00</td><td data-label="Descrição">SILICONE NEUTRO GREY HT ALT TEMPERATURA 60G WURTH</td><td data-label="Link"><a href="https://s3.sa-east-1.amazonaws.com/bd-sp.canaldapeca.com.br/Wurth/FISPQ/15-03-2023/0892_301_252.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00048-00</td><td data-label="Descrição">SILICONE LIQ GALAO 5L 0893221</td><td data-label="Link"><a href="https://cdn.doocacommerce.com.br/allchem/product/attachments/fispq-silicone-liquido-1518617602334.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00049-00</td><td data-label="Descrição">SILICONE PAST BISNAGA 250G OR</td><td data-label="Link"><a href="https://www.renylab.ind.br/wp-content/uploads/2018/08/FISPQ-Silicone.pdf" target="_blank">Link</a></td></tr>
+      <tr><td data-label="Código">MD-DVSOS-00052-00</td><td data-label="Descrição">VASELINA SOLIDA C/1KG</td><td data-label="Link"><a href="https://www.vonder.com.br/estatico/vonder/documentos/5160450000/FISPQ.pdf" target="_blank">Link</a></td></tr>
     </tbody>
   </table>
+  <footer>
+    <p>&copy; 2025 FISPQ/FDS. ALMOXARIFADO HUHTAMAKI</p>
+  </footer>
 
 </body>
 </html>
